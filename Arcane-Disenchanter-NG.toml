@@ -1,0 +1,4 @@
+# Arcane Disenchanter - NG
+
+[Patches]
+DisableItemDestruction = true    # Prevents items from being destroyed when learning a new enchantment.

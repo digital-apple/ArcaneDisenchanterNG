@@ -1,0 +1,71 @@
+{
+    __meta__ = {
+        version = "1.0"
+    },
+    ["windows|x64"] = {
+        ["cmake#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "c64d11db3514f307c0a6b165e2fe1aec49769f40",
+                url = "https://github.com/xmake-io/xmake-repo.git"
+            },
+            version = "3.26.0-msvc3"
+        },
+        ["commonlibsse-ng#db6d6aee"] = {
+            repo = {
+                branch = "master",
+                commit = "74828023ec23ec05421fc1f508278036b0b214e8",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v3.7.0"
+        },
+        ["fmt#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "c64d11db3514f307c0a6b165e2fe1aec49769f40",
+                url = "https://github.com/xmake-io/xmake-repo.git"
+            },
+            version = "10.0.0"
+        },
+        ["rapidcsv#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "c64d11db3514f307c0a6b165e2fe1aec49769f40",
+                url = "https://github.com/xmake-io/xmake-repo.git"
+            },
+            version = "8.50"
+        },
+        ["spdlog#b06e1130"] = {
+            repo = {
+                branch = "master",
+                commit = "c64d11db3514f307c0a6b165e2fe1aec49769f40",
+                url = "https://github.com/xmake-io/xmake-repo.git"
+            },
+            version = "v1.11.0"
+        },
+        ["toml++#db6d6aee"] = {
+            repo = {
+                branch = "master",
+                commit = "c64d11db3514f307c0a6b165e2fe1aec49769f40",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v3.3.0"
+        },
+        ["xbyak#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "74828023ec23ec05421fc1f508278036b0b214e8",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v6.03"
+        },
+        ["xbyak#db6d6aee"] = {
+            repo = {
+                branch = "master",
+                commit = "74828023ec23ec05421fc1f508278036b0b214e8",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v6.03"
+        }
+    }
+}
