@@ -111,8 +111,7 @@ void System::RemoveEnchantment(RE::InventoryEntryData* a_entry)
                 player->AddObjectToContainer(templateItem, nullptr, 1, nullptr);
             }
         }
-
-        //RE::PlaySound("VOCShoutFXThrowVoice");
+        
         UpdateUI();
     }
 }
