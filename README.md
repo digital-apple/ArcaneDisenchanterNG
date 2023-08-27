@@ -1,6 +1,6 @@
 # Arcane Disenchanter - NG
 
-* [Nexus Page](https://www.nexusmods.com/skyrimspecialedition/mods/)
+* [Nexus Page](https://www.nexusmods.com/skyrimspecialedition/mods/99375)
 
 ### Requirements
 
