@@ -4,7 +4,7 @@ class SystemCallback : public RE::IMessageBoxCallback
 {
 public:
     SystemCallback() = default;
-	~SystemCallback() override = default;
+    ~SystemCallback() override = default;
 
     void Run(RE::IMessageBoxCallback::Message a_message) override
     {
@@ -20,10 +20,10 @@ public:
 void System::ConstructMessageBox()
 {
     const auto factoryManager = RE::MessageDataFactoryManager::GetSingleton();
-	const auto strings = RE::InterfaceStrings::GetSingleton();
+    const auto strings = RE::InterfaceStrings::GetSingleton();
     const auto gameSettings = RE::GameSettingCollection::GetSingleton();
     const auto sYesText = gameSettings->GetSetting("sYesText");
-	const auto sNoText = gameSettings->GetSetting("sNoText");
+    const auto sNoText = gameSettings->GetSetting("sNoText");
     const auto sConfirmDisenchant = gameSettings->GetSetting("sConfirmDisenchant");
      
     if (factoryManager && strings) {
@@ -35,7 +35,7 @@ void System::ConstructMessageBox()
                 
                 if (sYesText && sNoText) {
                     messageBox->buttonText.push_back(sYesText->GetString());
-					messageBox->buttonText.push_back(sNoText->GetString());
+				    messageBox->buttonText.push_back(sNoText->GetString());
                 }
 
                 messageBox->unk38 = 10;
@@ -111,7 +111,7 @@ void System::RemoveEnchantment(RE::InventoryEntryData* a_entry)
                 player->AddObjectToContainer(templateItem, nullptr, 1, nullptr);
             }
         }
-        
+
         UpdateUI();
     }
 }
@@ -130,21 +130,21 @@ void System::UpdateUI()
 
 auto System::ConstructExtraDataList(void* a_this) -> RE::ExtraDataList*
 {
-	using func_t = decltype(&ConstructExtraDataList);
-	REL::Relocation<func_t> func{ RELOCATION_ID(11437, 11583) };
-	return func(a_this);
+    using func_t = decltype(&ConstructExtraDataList);
+    REL::Relocation<func_t> func{ RELOCATION_ID(11437, 11583) };
+    return func(a_this);
 }
 
 auto System::GetExtraHealth(RE::ExtraDataList* a_extra) -> float
 {
     using func_t = decltype(&GetExtraHealth);
-	REL::Relocation<func_t> func{ RELOCATION_ID(0, 11703) };
-	return func(a_extra);
+    REL::Relocation<func_t> func{ RELOCATION_ID(0, 11703) };
+    return func(a_extra);
 }
 
 void System::SetExtraHealth(RE::ExtraDataList* a_extra, float a_health)
 {
     using func_t = decltype(&SetExtraHealth);
-	REL::Relocation<func_t> func{ RELOCATION_ID(0, 11616) };
-	return func(a_extra, a_health);
+    REL::Relocation<func_t> func{ RELOCATION_ID(0, 11616) };
+    return func(a_extra, a_health);
 }

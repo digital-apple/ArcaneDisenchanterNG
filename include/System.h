@@ -4,10 +4,10 @@ class System
 {
 public:
     static System* GetSingleton()
-	{
-		static System singleton;
-		return &singleton;
-	}
+    {
+        static System singleton;
+        return &singleton;
+    }
 
     void ConstructMessageBox();
     auto GetCurrentEntry() -> RE::InventoryEntryData*;
@@ -21,13 +21,13 @@ public:
     static void SetExtraHealth(RE::ExtraDataList* a_extra, float a_health);
 private:
     System() = default;
-	System(const System&) = delete;
-	System(System&&) = delete;
+    System(const System&) = delete;
+    System(System&&) = delete;
 
-	~System() = default;
+    ~System() = default;
 
-	System& operator=(const System&) = delete;
-	System& operator=(System&&) = delete;
+    System& operator=(const System&) = delete;
+    System& operator=(System&&) = delete;
 
     RE::InventoryEntryData* currentEntry;
 };
