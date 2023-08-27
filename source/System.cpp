@@ -35,7 +35,7 @@ void System::ConstructMessageBox()
                 
                 if (sYesText && sNoText) {
                     messageBox->buttonText.push_back(sYesText->GetString());
-				    messageBox->buttonText.push_back(sNoText->GetString());
+                    messageBox->buttonText.push_back(sNoText->GetString());
                 }
 
                 messageBox->unk38 = 10;
