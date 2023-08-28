@@ -84,6 +84,7 @@ void System::RemoveEnchantment(RE::InventoryEntryData* a_entry)
                     }
 
                     auto xCharge = xList->GetByType<RE::ExtraCharge>();
+                    
                     if (xCharge) {
                         xList->Remove(RE::ExtraDataType::kCharge, xCharge);
                     }
