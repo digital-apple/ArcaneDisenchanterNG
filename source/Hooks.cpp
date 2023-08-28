@@ -53,6 +53,16 @@ namespace Addresses
         void ProcessEntry(RE::InventoryEntryData* a_entry)
         {
             if (a_entry) {
+                if (*Settings::RequiresPerk) {
+                    const auto perk = RE::TESDataHandler::GetSingleton()->LookupForm<RE::BGSPerk>(static_cast<RE::FormID>(*Settings::RequiredPerkID), *Settings::RequiredPerkModName);
+                    if (perk) {
+                        if (!RE::PlayerCharacter::GetSingleton()->HasPerk(perk)) {
+                            return;
+                        }
+                    } else {
+                        logs::warn("Addresses::RemoveEnchantment::ProcessEntry :: Invalid perk '{:x}' + '{}'", *Settings::RequiredPerkID, *Settings::RequiredPerkModName);
+                    }
+                } 
                 const auto system = System::GetSingleton();
                 system->SetCurrentEntry(a_entry);
                 system->ConstructMessageBox();

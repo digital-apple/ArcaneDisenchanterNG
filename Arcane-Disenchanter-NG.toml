@@ -1,4 +1,9 @@
 # Arcane Disenchanter - NG
 
 [Patches]
-DisableItemDestruction = true    # Prevents items from being destroyed when learning a new enchantment.
+DisableItemDestruction = true         # Prevents items from being destroyed when learning a new enchantment.
+
+[Settings]
+RequiresPerk = false                  # Prevents disenchanting items if the player does not have an specific perk.
+RequiredPerkID = 0xBEE97              # The form id of the perk without it's index values.
+RequiredPerkModName = "Skyrim.esm"    # The name of the mod that owns the perk. The file extension is also required.

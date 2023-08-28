@@ -4,8 +4,14 @@ class Settings
 {
 public:
     using bSetting = AutoTOML::bSetting;
+    using iSetting = AutoTOML::iSetting;
+    using sSetting = AutoTOML::sSetting;
 
     static inline bSetting DisableItemDestruction{ "Patches", "DisableItemDestruction", true };
+
+    static inline bSetting RequiresPerk{ "Settings", "RequiresPerk", false };
+    static inline iSetting RequiredPerkID{ "Settings", "RequiredPerkID", 0xBEE97 };
+    static inline sSetting RequiredPerkModName{ "Settings", "RequiredPerkModName", "Skyrim.esm" };
 
     static bool load_config(const std::string& a_path)
     {
