@@ -76,12 +76,17 @@ void System::RemoveEnchantment(RE::InventoryEntryData* a_entry)
 
         if (a_entry->extraLists) {
             for (const auto& xList : *a_entry->extraLists) {
-                if (xList && xList->GetByType<RE::ExtraEnchantment>()) {
-                    xList->RemoveByType(RE::ExtraDataType::kEnchantment);
-                }
+                if (xList) {
+                    auto xEnchantment = xList->GetByType<RE::ExtraEnchantment>();
 
-                if (xList && xList->GetByType<RE::ExtraCharge>()) {
-                    xList->RemoveByType(RE::ExtraDataType::kCharge);
+                    if (xEnchantment) {
+                        xList->Remove(RE::ExtraDataType::kEnchantment, xEnchantment);
+                    }
+
+                    auto xCharge = xList->GetByType<RE::ExtraCharge>();
+                    if (xCharge) {
+                        xList->Remove(RE::ExtraDataType::kCharge, xCharge);
+                    }
                 }
             }
         }
@@ -138,13 +143,13 @@ auto System::ConstructExtraDataList(void* a_this) -> RE::ExtraDataList*
 auto System::GetExtraHealth(RE::ExtraDataList* a_extra) -> float
 {
     using func_t = decltype(&GetExtraHealth);
-    REL::Relocation<func_t> func{ RELOCATION_ID(0, 11703) };
+    REL::Relocation<func_t> func{ RELOCATION_ID(11557, 11703) };
     return func(a_extra);
 }
 
 void System::SetExtraHealth(RE::ExtraDataList* a_extra, float a_health)
 {
     using func_t = decltype(&SetExtraHealth);
-    REL::Relocation<func_t> func{ RELOCATION_ID(0, 11616) };
+    REL::Relocation<func_t> func{ RELOCATION_ID(11470, 11616) };
     return func(a_extra, a_health);
 }
