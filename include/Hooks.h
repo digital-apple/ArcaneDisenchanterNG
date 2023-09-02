@@ -2,12 +2,12 @@
 
 namespace Addresses
 {
-    namespace KnownEnchantment
+    namespace DisableItemDestruction
     {
         void Hook();
     }
 
-    namespace UnknownEnchantment
+    namespace RemoveEnchantment
     {
         void Hook();
     }
